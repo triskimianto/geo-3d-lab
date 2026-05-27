@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo 3D Lab</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <div class="flex flex-col min-h-screen relative">
+        <header class="bg-white text-gray-800 border-b-2 border-dashed border-sky-950/50 dark:bg-gray-950 dark:border-sky-100/50 dark:text-gray-100">
+            <div class="container mx-auto px-5 md:px-10 xl:px-20 py-5">
+                <div class="mx-1">
+                    <a href="/" class="text-xl font-plex">
+                        <strong>Geo3D</strong>Lab
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 flex bg-sky-950/20 text-gray-800 dark:bg-gray-950/90 dark:text-gray-100 font-inter">
+            <div class="container mx-auto px-5 md:px-10 xl:px-20">
+                <div class="flex-1 h-full bg-white border-l-2 border-r-2 border-dashed border-sky-950/50 dark:bg-gray-950 dark:border-sky-100/50">
+                    <div class="px-5 xl:px-10 py-10 xl:py-20">
+                        <div class="flex flex-col-reverse gap-8 lg:flex-row lg:h-125">
+                            <div id="info" class="w-full lg:w-1/4 relative">                                
+                                <h2 class="text-xs uppercase tracking-[0.2em] mb-2 font-semibold">Live Analysis - 3D Cube</h2>
+                                <div id="cube-controls" class="mb-8 space-y-6">
+                                    <div class="space-y-4">
+                                        <div>
+                                            <label for="input-s" class="text-[10px] uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400 font-bold">Side (s)</label>
+                                            <div class="flex gap-2 mt-2">
+                                                <input type="number" id="input-s" name="input-s" value="1" step="0.1" min="0"
+                                                    class="w-full bg-sky-950/10 dark:bg-white/10 border border-sky-950/50 dark:border-sky-100/50 rounded-lg px-3 py-2 font-inter text-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/50 no-spinner">
+                                                
+                                                <select id="unit-select" class="bg-sky-950/10 dark:bg-white/10 border border-sky-950/50 dark:border-sky-100/50 rounded-lg px-2 text-xs font-inter text-gray-500 dark:text-gray-400">
+                                                    <option value="m">m</option>
+                                                    <option value="cm">cm</option>
+                                                    <option value="mm">mm</option>
+                                                </select>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div id="volume-display" class="mb-8 text-3xl font-plex font-bold text-sky-500 dark:text-sky-400">
+                                    Volume: 1 <span class="text-sm text-gray-500 dark:text-gray-400">m<sup>3</sup></span>
+                                </div>                                
+                                <div class="bg-sky-950/10 dark:bg-white/10 rounded-xl p-4 border border-sky-950/50 dark:border-sky-100/50 space-y-2">
+                                    <div class="flex justify-between font-inter text-xs text-gray-500 dark:text-gray-400">
+                                        <span>Formula</span>
+                                        <span class="text-gray-800 dark:text-gray-100">s³</span>
+                                    </div>
+                                    <div class="flex justify-between font-inter text-xs text-gray-500 dark:text-gray-400">
+                                        <span>Base Area</span>
+                                        <span id="area-display" class=" text-gray-800 dark:text-gray-100">1 m²</span>
+                                    </div>
+                                </div>                                
+                            </div>
+                            <div id="canvas-container" class="w-full h-87.5 flex relative lg:w-3/4 lg:h-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-white text-gray-800 border-t-2 border-dashed border-sky-950/50 dark:bg-gray-950 dark:border-sky-100/50 dark:text-gray-100">
+            <div class="container mx-auto px-5 md:px-10 xl:px-20 py-5 overflow-hidden">
+                <div class="relative mx-1 overflow-hidden">
+                    <div class="animate-marquee whitespace-nowrap">
+                        <span class="text-xs font-plex text-sky-950/80 uppercase tracking-widest pe-4 shrink-0 dark:text-gray-100/80">
+                            3D Geometry Lab Project — Stability: Stable — Render Engine: Three.js — Scale: Dynamic — 
+                        </span>
+                        <span class="text-xs font-plex text-sky-950/80 uppercase tracking-widest pe-4 shrink-0 dark:text-gray-100/80">
+                            3D Geometry Lab Project — Stability: Stable — Render Engine: Three.js — Scale: Dynamic — 
+                        </span>
+                        <span class="text-xs font-plex text-sky-950/80 uppercase tracking-widest pe-4 shrink-0 dark:text-gray-100/80">
+                            3D Geometry Lab Project — Stability: Stable — Render Engine: Three.js — Scale: Dynamic — 
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="module" src="/assets/js/main.js"></script>
+    </div>
+</body>
+</html>
