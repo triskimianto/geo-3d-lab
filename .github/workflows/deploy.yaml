@@ -3,7 +3,6 @@ name: Deploy Geo3D Lab to Pages
 on:
   push:
     branches: ["main"]
-
   workflow_dispatch:
 
 permissions:
